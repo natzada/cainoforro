@@ -133,6 +133,30 @@ nav ul li:hover .icon__login {
     transform: scale(1.1);
 }
 
+.text p{
+    text-align: center;
+    font-size: 25px;
+    color: #7F4738;
+    text-transform: uppercase;
+    margin-bottom: 140px;
+    font-family: "Adumu", sans-serif;
+
+}
+
+.cacto {
+    width: 15%;
+    position: absolute;
+}
+
+.left {
+    top: 66rem;
+    left: 1rem;
+}
+
+.right {
+    top: 72rem;
+    right: 1rem;
+}
 
 @media (max-width: 768px) {
     .title {

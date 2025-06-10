@@ -4,7 +4,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #fef1cc;
+  background-color: #f8eecb;
   font-family: 'Bungee', cursive;
 }
 
@@ -12,8 +12,8 @@
   background-color: #5b2a2a;
   border-radius: 20px;
   margin: 20px;
+  margin-top: 5%;
   padding: 10px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

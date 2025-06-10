@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../styles/home.css';
 import logo from '../assets/icon.png';
 import { FaUser } from 'react-icons/fa';
+import cacto from '../assets/cactus.webp'
 
 const Home = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -44,17 +45,16 @@ const Home = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8eecb" fill-opacity="1" d="M0,256L240,96L480,256L720,96L960,256L1200,32L1440,128L1440,320L1200,320L960,320L720,320L480,320L240,320L0,320Z"></path></svg>
             </div>
 
-
-            <img src="cacto left" alt="" />
+            <img src={cacto} className="cacto left" alt="" />
             <div className="text">
                 <p className="text-main">
-                    enquanto tu espera na fila pode aproveitar e cair no forró!! <br /><br /> tu vai se embalando nos joguinhos do site, e pode ganhar uns vouchers arretados pra trocar por prêmios de verdade lá na festa junina! <br /><br />
-                    Jogou bem? Danou-se de ponto? Então pode ser que tu leve um voucher valendo milho, quentão, brinde surpresa, ou até um vale pescaria direto da barraca, visse? <br /><br />
-                    É só mostrar o código pro pessoal da barraca e pronto: prêmio garantido e alegria na certa! <br /><br />
-                    Num perde tempo, não! Vai jogando, vai ganhando e cai no forró que a noite é uma criança!
+                    Enquanto tu espera na fila pode aproveitar e cair no forró!! <br /> tu vai se embalando nos joguinhos do site, e pode ganhar uns vouchers<br /> arretados pra trocar por prêmios de verdade lá na festa junina! <br />
+                    Jogou bem? Danou-se de ponto? Então pode ser que tu leve um voucher <br />valendo milho, quentão, brinde surpresa, ou até um vale pescaria direto da<br /> barraca, visse? <br />
+                    É só mostrar o código pro pessoal da barraca e pronto: prêmio garantido e<br /> alegria na certa! <br />
+                    Num perde tempo, não! Vai jogando, vai ganhando e cai no forró que a noite é<br /> uma criança!
                 </p>            
             </div>
-            <img src="cacto right" alt="" />
+            <img src={cacto} className="cacto right" alt="" />
         </>
     );
 };
