@@ -2,7 +2,8 @@ import { useState } from 'react';
 import '../styles/home.css';
 import logo from '../assets/icon.png';
 import { FaUser } from 'react-icons/fa';
-import cacto from '../assets/cactus.webp'
+import cacto from '../assets/cactus.webp';
+import bandeirinha from '../assets/bandeirinhas.png';
 
 const Home = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -55,6 +56,11 @@ const Home = () => {
                 </p>            
             </div>
             <img src={cacto} className="cacto right" alt="" />
+           <div className="bandeirinha-container">
+           <img src={bandeirinha} className="bandeirinha" alt="Bandeirinhas juninas"/>
+            </div>
+               <p className="jogos">Aqui você pode escolher o jogo que mais gosta!</p>
+
         </>
     );
 };
