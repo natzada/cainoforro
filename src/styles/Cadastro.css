@@ -4,13 +4,13 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #f8eecb;
+  background-color: #FFF7D6;
   font-family: 'Bungee', cursive;
 }
 
 .form-section {
   background-color: #5b2a2a;
-  border-radius: 20px;
+  border-radius: 20px;  
   margin: 20px;
   margin-top: 5%;
   padding: 10px;

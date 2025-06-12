@@ -5,8 +5,6 @@ import '../styles/Perfil.css';
 const Perfil: React.FC = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [data, setData] = useState('');
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Perfil atualizado com sucesso! ✨');
@@ -30,13 +28,6 @@ const Perfil: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Digite seu email"
-        />
-
-        <label>Data do dia:</label>
-        <input
-          type="date"
-          value={data}
-          onChange={(e) => setData(e.target.value)}
         />
 
         <button type="submit">Salvar</button>
