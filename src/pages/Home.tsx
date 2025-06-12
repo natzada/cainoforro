@@ -3,7 +3,9 @@ import '../styles/home.css';
 import logo from '../assets/icon.png';
 import { FaUser } from 'react-icons/fa';
 import cacto from '../assets/cactus.webp';
-import bandeirinha from '../assets/bandeirinhas.png';
+import { Link } from 'react-router-dom';
+
+
 
 const Home = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -22,15 +24,20 @@ const Home = () => {
                         <div className="bar"></div>
                     </div>
                     <ul className={menuOpen ? 'open' : ''}>
-                        <li>Início</li>
-                        <li>Stop Junino</li>
-                        <li>Jogo da véia</li>
-                        <li>Pula Fogueira</li>
-                        <li>
-                            <button className="btn__login">
-                               <FaUser className="icon__login" size={20} />
-                            </button>
-                        </li>
+                       <li>
+  <Link to="/" className="nav-link">Início</Link>
+</li>
+
+<li>
+  <Link to="/cadastro" className="nav-link">Comece Já</Link>
+</li>
+
+<li>
+  <Link to="/perfil" className="btn__login">
+    <FaUser className="icon__login" size={20} />
+  </Link>
+</li>
+
 
 
                     </ul>
@@ -40,10 +47,11 @@ const Home = () => {
             <main className='background'>
                 <img src={logo} alt="Logo da marca" className="title" />
                 <h3 className="subtitle">O tempo passa voando quando <br /> você cainoforró!</h3>
+            
             </main>
 
             <div className="wave-bottom">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8eecb" fill-opacity="1" d="M0,256L240,96L480,256L720,96L960,256L1200,32L1440,128L1440,320L1200,320L960,320L720,320L480,320L240,320L0,320Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF7D6" fill-opacity="1" d="M0,256L240,96L480,256L720,96L960,256L1200,32L1440,128L1440,320L1200,320L960,320L720,320L480,320L240,320L0,320Z"></path></svg>
             </div>
 
             <img src={cacto} className="cacto left" alt="" />
@@ -56,10 +64,6 @@ const Home = () => {
                 </p>            
             </div>
             <img src={cacto} className="cacto right" alt="" />
-           <div className="bandeirinha-container">
-           <img src={bandeirinha} className="bandeirinha" alt="Bandeirinhas juninas"/>
-            </div>
-               <p className="jogos">Aqui você pode escolher o jogo que mais gosta!</p>
 
         </>
     );

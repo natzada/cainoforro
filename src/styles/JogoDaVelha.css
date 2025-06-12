@@ -1,5 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&display=swap');
+@font-face {
+    font-family: "Adumu";
+    src: url('../assets/Adumu.ttf') format('truetype');
+    font-weight: normal;
+}
 
 .jogo-container {
   display: flex;
@@ -8,9 +13,10 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #f8eecb;
-  font-family: 'Archivo+Black';
+  font-family: 'Adumu';
   padding: 20px;
   text-align: center;
+  min-width: 100vw;
 }
 
 h1 {
@@ -59,4 +65,55 @@ button {
 
 .reset-btn:hover {
   background-color: #d23d2d;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 60px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .resultado {
+    font-size: 18px;
+  }
+
+  .reset-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .board {
+    grid-template-columns: repeat(3, 50px);
+    gap: 6px;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .resultado {
+    font-size: 16px;
+  }
+
+  .reset-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }

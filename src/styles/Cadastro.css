@@ -135,3 +135,35 @@
   padding: 20px;
   box-sizing: border-box;
 }
+@media (max-width: 768px) {
+  .cadastro-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .form-section {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mensagem {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .form-box button {
+    width: 80%;
+  }
+
+  .form-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
