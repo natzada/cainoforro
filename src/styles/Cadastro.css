@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+.cadastro-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF7D6;
+  font-family: 'Bungee', cursive;
+  color: #FFF7D6;
+}
+
+.form-section {
+  background-color: #5b2a2a;
+  border-radius: 20px;  
+  margin: 20px;
+  margin-top: 5%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.form-box label {
+  color: #ffc72c;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.form-box input {
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.form-box button {
+  background-color: #ffc72c;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+  align-self: center;
+}
+
+.login-text {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+}
+
+.login-text a {
+  color: #ffc72c;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.mensagem {
+  color: #5b2a2a;
+  font-family: "Adumu";
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.form-toggle button {
+  background-color: #ffc72c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+.form-toggle .active {
+  background-color: #5b2a2a;
+  color: #ffc72c;
+}
+
+.form-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: auto;           /* permite expansão */
+  min-height: 400px;       /* altura base mínima opcional */
+  transition: height 0.3s ease;
+}
+
+
+.form-slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-slider.cadastro {
+  transform: translateX(0%);
+}
+
+.form-slider.login {
+  transform: translateX(-50%);
+}
+
+.form-box {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .cadastro-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .form-section {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mensagem {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .form-box button {
+    width: 80%;
+  }
+
+  .form-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

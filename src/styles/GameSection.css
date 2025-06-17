@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family: "Adumu";
+    src: url('../assets/Adumu.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff7d6;
+    font-family: 'Adumu', sans-serif;
+}
+
+/* Bandeirinhas de ponta a ponta */
+.bandeirinha-container {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bandeirinha {
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Título */
+.jogos {
+    font-size: 30px;
+    color: #7F4738;
+    font-family: "Adumu", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grids */
+.grid-inicial,
+.grid-secundaria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px; 
+    margin: 20px auto;
+    color: #7f4738;
+    font-size: 20px;
+}
+
+/* Itens */
+.grid-inicial > div,
+.grid-secundaria > div {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #f5c065;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.grid-inicial > div:hover,
+.grid-secundaria > div:hover {
+    background-color: #ffe49c; 
+    transform: scale(1.08);    
+    box-shadow: 0 0 15px #ffc107;
+}
+
+.grid-inicial img,
+.grid-secundaria img {
+    width: 170px;
+    height: 170px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: "Adumu", sans-serif;
+}
+@media (max-width: 1024px) {
+  .grid-inicial,
+  .grid-secundaria {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jogos {
+    font-size: 24px;
+    margin: 20px 10px;
+  }
+
+  .grid-inicial,
+  .grid-secundaria {
+    gap: 30px;
+    font-size: 18px;
+  }
+
+  .grid-inicial > div,
+  .grid-secundaria > div {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .grid-inicial img,
+  .grid-secundaria img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jogos {
+    font-size: 20px;
+  }
+
+  .grid-inicial > div,
+  .grid-secundaria > div {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .grid-inicial img,
+  .grid-secundaria img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+/* Remove estilos padrão de links dentro do espantalho */
+.espantalho a {
+    color: #7F4738; /* mesma cor dos outros textos */
+    text-decoration: none;
+    font-family: "Adumu", sans-serif;
+}
+
+/* Mantém a cor ao passar o mouse */
+.espantalho a:hover {
+    color: #7F4738;
+    text-decoration: none;
+}
+
+
