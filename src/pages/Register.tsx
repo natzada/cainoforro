@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import '../styles/Cadastro.css';
 import api from '../services/api';
-import { useNavigate } from 'react-router-dom';
 import Login from './Login';
 
 const Cadastro = () => {
@@ -36,7 +35,6 @@ const Cadastro = () => {
       alert('Erro ao cadastrar 😢');
     }
   };
-  const navigate = useNavigate();
 
 
   return (

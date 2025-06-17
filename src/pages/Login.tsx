@@ -11,7 +11,7 @@ const Login: React.FC = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:8080/auth/login', {
-        email: email,
+        email,
         password: senha,
       });
 
@@ -19,7 +19,7 @@ const Login: React.FC = () => {
 
       localStorage.setItem('usuario', JSON.stringify(user));
       alert('Login realizado com sucesso!');
-      navigate('/jogos');
+      navigate('/jogos'); // tela onde terá o botão resgatar
     } catch (error) {
       console.error(error);
       setErro('E-mail ou senha incorretos');
@@ -28,21 +28,11 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-container">
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        placeholder="E-mail"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <label>Email:</label>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
 
-      <label htmlFor="senha">Senha:</label>
-      <input
-        type="password"
-        placeholder="Senha"
-        value={senha}
-        onChange={(e) => setSenha(e.target.value)}
-      />
+      <label>Senha:</label>
+      <input type="password" value={senha} onChange={e => setSenha(e.target.value)} />
 
       <button onClick={handleLogin}>Entrar</button>
 

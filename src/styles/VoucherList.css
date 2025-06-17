@@ -1,13 +1,16 @@
 .voucher-container {
     text-align: center;
-    font-family: 'Arial', sans-serif;
     background-color: #fff8dc;
     min-height: 100vh;
     padding: 40px 20px;
+    font-family: 'Adumu', sans-serif;
+    font-weight: 100;
 }
 
 .voucher-container h2 {
     color: #d2691e;
+    font-family: 'Adumu', sans-serif;
+    font-weight: 100;
     margin-bottom: 30px;
 }
 
@@ -42,6 +45,8 @@
     color: #f5f5f5;
     margin: 10px 0;
     font-size: 16px;
+    font-family: 'Adumu', sans-serif;
+    font-weight: 100;
 }
 
 .pegar-btn {
