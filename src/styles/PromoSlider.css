@@ -48,6 +48,18 @@
   margin-top: 30px;
 }
 
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo button {
+  width: 50%;
+  margin: 0 auto;
+  font-weight: 100;
+}
+
 .titulo img {
   margin-left: 60px;
   max-width: 460px;

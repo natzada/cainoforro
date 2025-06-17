@@ -46,3 +46,27 @@
 .perfil-container button:hover {
   background-color: #e65100;
 }
+
+.foto-perfil {
+  margin-bottom: 1rem;
+}
+
+.imagem-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+input[type="file"] {
+  margin-top: 0.5rem;
+}
+
+form,
+.info-perfil {
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: start;
+  text-align: center;
+}
+

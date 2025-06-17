@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/PromoSlider.css";
+import { useNavigate } from 'react-router-dom';
 
 import promo1 from "../assets/arroz.png";
 import promo2 from "../assets/pipoca.png";
@@ -22,11 +23,18 @@ const PromoSlider = () => {
     return () => clearInterval(intervalo);
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleResgate = () => {
+    navigate('/voucher')
+  }
+
   return (
 
     <div className="container-promo">
       <div className="titulo">
         <img src={titulo} alt="titulo do slider" />
+        <button onClick={handleResgate}>Resgatar Voucher</button>
       </div>
 
 
