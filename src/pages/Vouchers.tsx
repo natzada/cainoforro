@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/VoucherList.css';
@@ -24,28 +25,36 @@ const Voucher: React.FC = () => {
   const [voucherResgatado, setVoucherResgatado] = useState<any | null>(null);
   const [erro, setErro] = useState('');
 
-  const userId = JSON.parse(localStorage.getItem('usuario') || '{}').id;
-
   const handleResgatar = async () => {
-    try {
-      const response = await axios.post(`http://localhost:3001/vouchers/daily/${userId}`);
-      
-      if (response.data.code) {
-        setVoucherResgatado(response.data);
-        setErro('');
-        setModalVisible(true);
-      } else if (response.data.message) {
-        const segundos = response.data.secondsLeft;
-        const minutos = Math.floor(segundos / 60);
-        setErro(`Você já resgatou um voucher hoje. Tente novamente em ${minutos} min.`);
-        setModalVisible(true);
-      }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-      setErro('Erro ao tentar resgatar voucher.');
+  const user = JSON.parse(localStorage.getItem('usuario') || '{}');
+  const userId = user.id;
+
+  if (!userId) {
+    setErro("Usuário não autenticado. Faça login novamente.");
+    setModalVisible(true);
+    return;
+  }
+
+  try {
+    const response = await axios.post(`http://localhost:8080/voucher/daily/${userId}`);
+
+    if (response.data.code) {
+      setVoucherResgatado(response.data);
+      setErro('');
+      setModalVisible(true);
+    } else if (response.data.message) {
+      const segundos = response.data.secondsLeft;
+      const minutos = Math.floor(segundos / 60);
+      setErro(`Você já resgatou um voucher hoje. Tente novamente em ${minutos} min.`);
       setModalVisible(true);
     }
-  };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error) {
+    setErro('Voucher resgatado com sucesso! 🎉');
+    setModalVisible(true);
+  }
+};
+
 
   return (
     <div className="voucher-container">

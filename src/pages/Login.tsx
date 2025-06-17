@@ -8,52 +8,48 @@ const Login: React.FC = () => {
   const [erro, setErro] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/login', {
-        email,
-        senha,
+      const response = await axios.post('http://localhost:8080/auth/login', {
+        email: email,
+        password: senha,
       });
 
-      if (response.data && response.data.nome) {
-        localStorage.setItem('usuario', JSON.stringify(response.data));
-        setErro('');
-        navigate('/jogos');
-      } else {
-        setErro('Login inválido. Verifique suas credenciais.');
-      }
-    } catch (erro) {
-  console.error('Erro ao fazer login:', erro); // <-- isso já elimina o aviso
-  setErro('Login inválido. Verifique suas credenciais.');
-}
+      
 
+
+      const user = response.data;
+
+      localStorage.setItem('usuario', JSON.stringify(user));
+      alert('Login realizado com sucesso!');
+      navigate('/home'); // Change to your home page
+    } catch (error) {
+      console.error(error);
+      setErro('E-mail ou senha incorretos');
+    }
   };
 
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
 
-        <label>Senha:</label>
-        <input
-          type="password"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          required
-        />
+      <input
+        type="email"
+        placeholder="E-mail"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-        <button type="submit">Entrar</button>
-      </form>
-      {erro && <p className="erro">{erro}</p>}
+      <input
+        type="password"
+        placeholder="Senha"
+        value={senha}
+        onChange={(e) => setSenha(e.target.value)}
+      />
+
+      <button onClick={handleLogin}>Entrar</button>
+
+      {erro && <p className="error">{erro}</p>}
     </div>
   );
 };
