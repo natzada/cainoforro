@@ -36,15 +36,12 @@ const Voucher: React.FC = () => {
   }
 
   try {
-    const response = await axios.post(`http://localhost:8080/voucher/daily/${userId}`);
+    const response = await axios.post(`http://localhost:8080/voucher/daily/2`);
 
     if (response.data.code) {
       setVoucherResgatado(response.data);
-<<<<<<< HEAD
       setErro('Voucher resgatado com sucesso! 🎉 seu código é: ABC-098-XYZ');
-=======
       setErro('');
->>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
       setModalVisible(true);
     } else if (response.data.message) {
       const segundos = response.data.secondsLeft;
@@ -54,11 +51,7 @@ const Voucher: React.FC = () => {
     }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
-<<<<<<< HEAD
     setErro('Não foi possível resgatar o seu voucher :(');
-=======
-    setErro('Voucher resgatado com sucesso! 🎉');
->>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
     setModalVisible(true);
   }
 };
@@ -97,9 +90,4 @@ const Voucher: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 export default Voucher;
