@@ -24,10 +24,6 @@ const Voucher: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [voucherResgatado, setVoucherResgatado] = useState<any | null>(null);
   const [erro, setErro] = useState('');
-<<<<<<< HEAD
-  
-=======
->>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 
   const handleResgatar = async () => {
   const user = JSON.parse(localStorage.getItem('usuario') || '{}');
