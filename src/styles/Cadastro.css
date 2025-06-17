@@ -6,7 +6,10 @@
   height: 100vh;
   background-color: #FFF7D6;
   font-family: 'Bungee', cursive;
+<<<<<<< HEAD
   color: #FFF7D6;
+=======
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 }
 
 .form-section {
@@ -26,7 +29,10 @@
   color: #ffc72c;
   margin-bottom: 5px;
   font-size: 0.9rem;
+<<<<<<< HEAD
   text-align: left;
+=======
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 }
 
 .form-box input {

@@ -15,12 +15,21 @@ const Login: React.FC = () => {
         password: senha,
       });
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 
       const user = response.data;
 
       localStorage.setItem('usuario', JSON.stringify(user));
       alert('Login realizado com sucesso!');
+<<<<<<< HEAD
       navigate('/jogos'); // Change to your home page
+=======
+      navigate('/home'); // Change to your home page
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
     } catch (error) {
       console.error(error);
       setErro('E-mail ou senha incorretos');
@@ -29,16 +38,30 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-container">
+<<<<<<< HEAD
       <label htmlFor="email">Email:</label>
       <input
         type="email"
+=======
+      <h2>Login</h2>
+
+      <input
+        type="email"
+        placeholder="E-mail"
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
+<<<<<<< HEAD
       <label htmlFor="senha">Senha:</label>
       <input
         type="password"
+=======
+      <input
+        type="password"
+        placeholder="Senha"
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
       />

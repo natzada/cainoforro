@@ -24,7 +24,10 @@ const Voucher: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [voucherResgatado, setVoucherResgatado] = useState<any | null>(null);
   const [erro, setErro] = useState('');
+<<<<<<< HEAD
   
+=======
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 
   const handleResgatar = async () => {
   const user = JSON.parse(localStorage.getItem('usuario') || '{}');
@@ -41,7 +44,11 @@ const Voucher: React.FC = () => {
 
     if (response.data.code) {
       setVoucherResgatado(response.data);
+<<<<<<< HEAD
       setErro('Voucher resgatado com sucesso! 🎉 seu código é: ABC-098-XYZ');
+=======
+      setErro('');
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
       setModalVisible(true);
     } else if (response.data.message) {
       const segundos = response.data.secondsLeft;
@@ -51,7 +58,11 @@ const Voucher: React.FC = () => {
     }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
+<<<<<<< HEAD
     setErro('Não foi possível resgatar o seu voucher :(');
+=======
+    setErro('Voucher resgatado com sucesso! 🎉');
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
     setModalVisible(true);
   }
 };
@@ -90,6 +101,9 @@ const Voucher: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 17eb03191729b1842b1c185e6f1bb1eb05c293ba
 export default Voucher;
